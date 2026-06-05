@@ -1,14 +1,15 @@
-public class FibonacciRecursion1ton {
+public class FibonacciRecursionnto1 {
 
-    static void printNumbers(int n) {
+        static void printNumbers(int n) {
 
         if (n == 0) {
             return;
         }
 
+        System.out.print(n + " ");
         printNumbers(n - 1);
 
-        System.out.print(n + " ");
+        
     }
 
     public static void main(String[] args) {
@@ -18,6 +19,4 @@ public class FibonacciRecursion1ton {
         printNumbers(n);
     }
 }
-
-
 
