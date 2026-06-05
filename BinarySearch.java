@@ -1,21 +1,36 @@
-public void binarySearch(int[] nums, int target) {
-    int left = 0;
-    int right = nums.length - 1;
+public class BinarySearch {
 
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
+    public static int binarySearch(int[] arr, int key) {
+        int left = 0;
+        int right = arr.length - 1;
 
-        if (nums[mid] == target) {
-            System.out.println("Target found at index: " + mid);
-            return;
-        } else if (nums[mid] < target) {
-            left = mid + 1; // Search in the right half
-        } else {
-            right = mid - 1; // Search in the left half
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == key) {
+                return mid; // Element found
+            }
+
+            if (arr[mid] < key) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
         }
+
+        return -1; // Element not found
     }
 
-    System.out.println("Target not found in the array.");
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30, 40, 50, 60, 70};
+        int key = 50;
+
+        int result = binarySearch(arr, key);
+
+        if (result != -1) {
+            System.out.println("Element found at index: " + result);
+        } else {
+            System.out.println("Element not found");
+        }
+    }
 }
-
-
