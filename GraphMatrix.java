@@ -37,21 +37,37 @@ public class GraphMatrix {
 
     public static void main(String[] args) {
 
-        String[] vertices = {
-            "A", "B", "C", "D", "E", "F", "G", "J", "K"
-        };
+String[] vertices = {
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"
+};
 
-        GraphMatrix graph = new GraphMatrix(vertices);
+GraphMatrix graph = new GraphMatrix(vertices);
 
-        graph.addEdge(0, 1); // A-B
-        graph.addEdge(0, 2); // A-C
-        graph.addEdge(1, 3); // B-D
-        graph.addEdge(2, 4); // C-E
-        graph.addEdge(3, 5); // D-F
-        graph.addEdge(5, 6); // F-G
-        graph.addEdge(6, 7); // G-J
-        graph.addEdge(7, 8); // J-K
+graph.addEdge(0, 1);   // A-B
+graph.addEdge(0, 7);   // A-H
 
-        graph.printGraph();
+graph.addEdge(1, 2);   // B-C
+graph.addEdge(1, 3);   // B-D
+graph.addEdge(1, 10);  // B-K
+
+graph.addEdge(2, 8);   // C-I
+
+graph.addEdge(3, 4);   // D-E
+graph.addEdge(3, 5);   // D-F
+graph.addEdge(3, 7);   // D-H
+graph.addEdge(3, 10);  // D-K
+
+graph.addEdge(4, 6);   // E-G
+
+graph.addEdge(5, 8);   // F-I
+
+graph.addEdge(6, 9);   // G-J
+
+graph.addEdge(7, 11);  // H-L
+
+graph.addEdge(8, 9);   // I-J
+graph.addEdge(8, 10);  // I-K
+
+graph.printGraph();
     }
 }

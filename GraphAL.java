@@ -37,20 +37,36 @@ public class GraphAL {
         }
     }
 
-    public static void main(String[] args) {
-        // Create a graph with 5 vertices (labeled 0 to 4)
-        GraphAL graph = new GraphAL(5);
+public static void main(String[] args) {
 
-        // Add edges
-        graph.addEdge(0, 1);
-        graph.addEdge(0, 4);
-        graph.addEdge(1, 2);
-        graph.addEdge(1, 3);
-        graph.addEdge(1, 4);
-        graph.addEdge(2, 3);
-        graph.addEdge(3, 4);
+    // 12 vertices: A,B,C,D,E,F,G,H,I,J,K,L
+    GraphAL graph = new GraphAL(12);
 
-        // Print the graph
-        graph.printGraph();
-    }
+    graph.addEdge(0, 1);   // A-B
+    graph.addEdge(0, 7);   // A-H
+
+    graph.addEdge(1, 2);   // B-C
+    graph.addEdge(1, 3);   // B-D
+    graph.addEdge(1, 10);  // B-K
+
+    graph.addEdge(2, 8);   // C-I
+
+    graph.addEdge(3, 4);   // D-E
+    graph.addEdge(3, 5);   // D-F
+    graph.addEdge(3, 7);   // D-H
+    graph.addEdge(3, 10);  // D-K
+
+    graph.addEdge(4, 6);   // E-G
+
+    graph.addEdge(5, 8);   // F-I
+
+    graph.addEdge(6, 9);   // G-J
+
+    graph.addEdge(7, 11);  // H-L
+
+    graph.addEdge(8, 9);   // I-J
+    graph.addEdge(8, 10);  // I-K
+
+    graph.printGraph();
+}
 }
